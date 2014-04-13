@@ -1,52 +1,52 @@
 
-*{
+* {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-body{
+body {
 	font-family: 'calibri', sans-serif;
 }
 
-h1{
+h1 {
 	margin: 2em 0 0;
 	text-align: center;
 	text-transform: uppercase;
 }
 
-p{
+p {
 	text-align: center;
 	margin: 0;
 }
 
-nav ul{
+nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
-.access-menu{
+.access-menu {
 	display: table;
 	margin: 1em auto;
 }
 
-.access-menu > li{
+.access-menu > li {
 	background: #333;
 	display: inline-block;
 	position: relative;
 }
 
-.access-menu > li + li{
+.access-menu > li + li {
 	border-left: solid 1px #000;
 }
 
-.access-menu > li:hover .access-submenu{
+.access-menu > li:hover .access-submenu {
 	top: 100%;
 	left: auto;
 }
 
-.access-menu a{
+.access-menu a {
 	color: #eee;
 	display: block;
 	padding: .5em 2em;
@@ -60,12 +60,12 @@ nav ul{
 }
 
 .access-menu a:hover,
-.access-menu a:focus{
+.access-menu a:focus {
 	background: #369;
 	outline: none;
 }
 
-.access-submenu{
+.access-submenu {
 	background: #444;
 	left: -9999px;
 	position: absolute;
@@ -73,19 +73,19 @@ nav ul{
 	width: 150%;
 }
 
-.access-submenu > li + li{
+.access-submenu > li + li {
 	border-top: solid 1px #000;
 }
 
-.access-submenu > li:last-child{
+.access-submenu > li:last-child {
 	border-bottom: solid 3px #000;
 }
 
-.access-submenu a{
+.access-submenu a {
 	padding: .5em 1em;
 }
 
-.is-show{
+.is-show {
 	left: auto;
 	top: 100%;
 }
