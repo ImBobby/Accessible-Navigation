@@ -7,4 +7,4 @@ This repo showcase how to make accessible drop down menu. **Seriously, use it!**
 
 ## We need jQuery plugin!
 
-Of course it will be in the to do list. Any contribution to make the plugin will be really appreciated.
+Any contribution to make this demo into a plugin will be really appreciated.
