@@ -1,41 +1,43 @@
 var App = {
 
 	accessibleMenu: function(){
-		var menu = $('.access-menu'),
-			menuItem = menu.find('> li > a'),
+		var menu                 = $('.access-menu'),
+            menu_item            = menu.find('> li > a'),
 
-			subMenu = $('.access-submenu'),
-			subMenuItem = subMenu.find('> li > a'),
-			submenuLastItem = subMenu.find('> li:last-child > a');
+			subMenu              = $('.access-submenu'),
+			subMenu_item         = subMenu.find('> li > a'),
+			subMenu_last_item    = subMenu.find('> li:last-child > a'),
 
-		menuItem.bind({
+            isShow               = 'is-show';
+
+		menu_item.bind({
 			focus: function(){
-				subMenu.removeClass('is-show');
+				subMenu.removeClass(isShow);
 				if($(this).next(subMenu)){
-					$(this).next(subMenu).addClass('is-show');
+					$(this).next(subMenu).addClass(isShow);
 				}
 			},
 
 			blur: function(){
-				subMenu.removeClass('is-show');
+				subMenu.removeClass(isShow);
 			}
 		});
 
-		subMenuItem.bind({
+		subMenu_item.bind({
 			focus: function(){
-				$(this).parent().parent().addClass('is-show');
+				$(this).parent().parent().addClass(isShow);
 			}
 		});
 
-		submenuLastItem.bind({
+		subMenu_last_item.bind({
 			blur: function(){
-				subMenu.removeClass('is-show');
+				subMenu.removeClass(isShow);
 			}
 		});
 
 		$(document).click(function(){
-			if(subMenu.hasClass('is-show')){
-				subMenu.removeClass('is-show');
+			if(subMenu.hasClass(isShow)){
+				subMenu.removeClass(isShow);
 			}
 		});
 	}
