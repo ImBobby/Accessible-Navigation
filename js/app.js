@@ -1,49 +1,67 @@
 var App = {
 
-	accessibleMenu: function(){
-		var menu                 = $('.access-menu'),
-            menu_item            = menu.find('> li > a'),
+    accessibleMenu: function () {
+        var _document           = $(document),
 
-			subMenu              = $('.access-submenu'),
-			subMenu_item         = subMenu.find('> li > a'),
-			subMenu_last_item    = subMenu.find('> li:last-child > a'),
+            menu                = $('.access-menu'),
+            menu_item           = menu.find('> li > a'),
 
-            isShow               = 'is-show';
+            subMenu             = $('.access-submenu'),
+            subMenu_item        = subMenu.find('> li > a'),
+            subMenu_last_item   = subMenu.find('> li:last-child > a'),
 
-		menu_item.bind({
-			focus: function(){
-				subMenu.removeClass(isShow);
-				if($(this).next(subMenu)){
-					$(this).next(subMenu).addClass(isShow);
-				}
-			},
+            isShow              = 'is-show';
 
-			blur: function(){
-				subMenu.removeClass(isShow);
-			}
-		});
+        menu_item.bind({
 
-		subMenu_item.bind({
-			focus: function(){
-				$(this).parent().parent().addClass(isShow);
-			}
-		});
+            focus: function () {
+                var _this           = $(this),
+                    next_subMenu    = _this.next(subMenu);
+                
+                subMenu.removeClass(isShow);
 
-		subMenu_last_item.bind({
-			blur: function(){
-				subMenu.removeClass(isShow);
-			}
-		});
+                if ( next_subMenu ) {
+                    next_subMenu.addClass(isShow);
+                }
 
-		$(document).click(function(){
-			if(subMenu.hasClass(isShow)){
-				subMenu.removeClass(isShow);
-			}
-		});
-	}
+            },
+
+            blur: function () {
+                subMenu.removeClass(isShow);
+            }
+
+        });
+
+        subMenu_item.bind({
+
+            focus: function () {
+                var _this           = $(this),
+                    _this_parent    = _this.parent().parent();
+
+                _this_parent.addClass(isShow);
+            }
+
+        });
+
+        subMenu_last_item.bind({
+
+            blur: function () {
+                subMenu.removeClass(isShow);
+            }
+
+        });
+
+        _document.click(function () {
+            if ( subMenu.hasClass(isShow) ) {
+                subMenu.removeClass(isShow);
+            }
+        });
+    }
 
 };
 
-$(function(){
-	App.accessibleMenu();
-});
+(function () {
+
+    App.accessibleMenu();
+
+})();
