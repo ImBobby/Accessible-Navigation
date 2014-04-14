@@ -1,8 +1,8 @@
 
 * {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
@@ -16,14 +16,14 @@ h1 {
 }
 
 p {
-    text-align: center;
     margin: 0;
+    text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .access-menu {
@@ -32,9 +32,9 @@ nav ul {
 }
 
 .access-menu > li {
-    background: #333;
-    display: inline-block;
     position: relative;
+    display: inline-block;
+    background: #333;
 }
 
 .access-menu > li + li {
@@ -53,10 +53,10 @@ nav ul {
     text-decoration: none;
 
     -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear;
+       -moz-transition: all .2s linear;
+        -ms-transition: all .2s linear;
+         -o-transition: all .2s linear;
+            transition: all .2s linear;
 }
 
 .access-menu a:hover,
@@ -66,11 +66,11 @@ nav ul {
 }
 
 .access-submenu {
-    background: #444;
-    left: -9999px;
     position: absolute;
     top: -9999px;
+    left: -9999px;
     width: 150%;
+    background: #444;
 }
 
 .access-submenu > li + li {
@@ -86,6 +86,6 @@ nav ul {
 }
 
 .is-show {
-    left: auto;
     top: 100%;
+    left: auto;
 }
