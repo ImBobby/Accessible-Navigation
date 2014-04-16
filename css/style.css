@@ -1,4 +1,7 @@
 
+/* Setup
+-------------------------------------------------------------------------------- */
+
 * {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
@@ -19,6 +22,10 @@ p {
     margin: 0;
     text-align: center;
 }
+
+
+/* Accessible menu style
+-------------------------------------------------------------------------------- */
 
 nav ul {
     padding: 0;
@@ -47,9 +54,9 @@ nav ul {
 }
 
 .access-menu a {
-    color: #eee;
     display: block;
     padding: .5em 2em;
+    color: #eee;
     text-decoration: none;
 
     -webkit-transition: all .2s linear;
